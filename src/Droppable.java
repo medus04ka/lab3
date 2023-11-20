@@ -1,0 +1,3 @@
+interface Droppable {
+    void drop();
+}
