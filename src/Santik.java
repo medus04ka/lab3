@@ -1,11 +1,9 @@
 import java.util.Random;
 
-class Santik implements ShelfItem, Droppable {
-    private static final Random random = new Random();
-
+class Santik implements ShelfItem, SantikInteraction {
     @Override
     public void use() {
-        System.out.println("Козлик положил сантик на металический язычок");
+        System.out.println("Козлик уронил сантик.");
     }
 
     @Override
@@ -14,11 +12,13 @@ class Santik implements ShelfItem, Droppable {
     }
 
     @Override
-    public void drop() {
-        System.out.println("Козлик уронил сантик и нагнулся, чтобы поднять его");
+    public boolean dropSantik() {
+        Random random = new Random();
+        return random.nextBoolean();
     }
 
-    public static boolean willDrop() {
-        return random.nextBoolean();
+    @Override
+    public void pickUpSantik() {
+        System.out.println("Козлик уронил сантик и нагнулся, чтобы поднять его");
     }
 }

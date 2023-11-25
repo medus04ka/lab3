@@ -1,3 +1,0 @@
-interface Droppable {
-    void drop();
-}

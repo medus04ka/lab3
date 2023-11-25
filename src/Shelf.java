@@ -1,27 +1,27 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 class Shelf {
-    private final List<ShelfItem> items;
+    private List<ShelfItem> items;
 
     public Shelf() {
         this.items = new ArrayList<>();
     }
 
-    public void putItem(ShelfItem item) {
-        items.add(item);
-        System.out.println("Тронул полочку, из которой появились " + item.getClass().getSimpleName() +", но для их использования нужно было заплатить");
-    }
-
-    public List<ShelfItem> getItems() {
-        return items;
-    }
-
-    public void displayItems() {
-        for (ShelfItem item : items) {
-            System.out.println(item.getClass().getSimpleName() + ": " + item.getCost() + " сантиков");
+    public boolean putItem(ShelfItem item) {
+        boolean accepted = dropSantik();
+        if (accepted) {
+            items.add(item);
+            System.out.println("Козлик положил " + item.getClass().getSimpleName() + " на полочку.");
         }
+        return accepted;
+    }
+
+    private boolean dropSantik() {
+        Random random = new Random();
+        return random.nextBoolean();
     }
 }
 
