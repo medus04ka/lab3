@@ -3,7 +3,7 @@ import java.util.Random;
 class Santik implements ShelfItem, SantikInteraction {
     @Override
     public void use() {
-        System.out.println("Козлик посмотрел на цену, указанную на механическом язычке.");
+        System.out.println("Козлик посмотрел на цену, указанную на механическом язычке, решил посчитать сантики.");
     }
 
     @Override
@@ -19,6 +19,6 @@ class Santik implements ShelfItem, SantikInteraction {
 
     @Override
     public void pickUpSantik() {
-        System.out.println("Козлик уронил сантик и нагнулся, чтобы поднять его");
+        System.out.println("Козлик снова уронил сантик и нагнулся, чтобы поднять его");
     }
 }
