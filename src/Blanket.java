@@ -1,4 +1,3 @@
-
 class Blanket extends BeddingItem {
     public Blanket() {
         super("Одеялко");

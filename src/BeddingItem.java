@@ -1,4 +1,3 @@
-
 abstract class BeddingItem implements ShelfItem {
     private final String name;
 

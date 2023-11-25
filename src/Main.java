@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         Shelf shelf = new Shelf();
@@ -10,7 +8,6 @@ public class Main {
         shelf.putItem(new Blanket());
         shelf.putItem(new Pillow());
 
-        // Демонстрация поднятия сантика
         Santik santik = new Santik();
         goat.pickUpSantik(santik);
     }
