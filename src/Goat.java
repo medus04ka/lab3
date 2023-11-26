@@ -10,7 +10,7 @@ class Goat {
     }
 
     public void interactWithShelf(Shelf shelf) {
-        boolean santikDropped = dropSantik(); // Вероятность 50/50
+        boolean santikDropped = dropSantik();
         if (santikDropped) {
             System.out.println("Козлик уронил сантик.");
             shelf.putItem(new Santik());
@@ -18,7 +18,7 @@ class Goat {
             System.out.println("Козлик положил сантик на механический язычок.");
         }
 
-        boolean accepted = shelf.putItem(new Santik()); // Вероятность 50/50
+        boolean accepted = shelf.putItem(new Santik());
         if (accepted) {
             System.out.println("Козлик забрал спальные предметы.");
         } else {
